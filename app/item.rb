@@ -5,7 +5,7 @@ class Item
     @name = name
     @price = price
     Application.all_items << self.name
-    binding.pry
+    #binding.pry
 
   end
 end
