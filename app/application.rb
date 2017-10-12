@@ -1,6 +1,7 @@
 class Application
 
-@@items = []
+  @@items = []
+
   def self.all
     @@items
   end
