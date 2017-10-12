@@ -2,8 +2,8 @@ class Application
 
   @@items = []
 
-  def self.all
-    binding.pry
+  def self.all_items
+    @@items
   end
 
   def call(env)
