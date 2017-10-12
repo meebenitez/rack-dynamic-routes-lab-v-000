@@ -4,7 +4,7 @@ class Item
   def initialize(name,price)
     @name = name
     @price = price
-    Application.all_items << self
+    Application.all_items << self.name
     binding.pry
 
   end
