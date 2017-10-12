@@ -6,11 +6,11 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    user_item = req.params["q"]
-    
-    if req.path=="/items/#{user_item}"
-      user_item = req.params["q"]
-      if @@items.include?(user_item)
+
+    if req.path.match(/items/)
+      item = reg.path.split("/items/").last
+      item = @@items.find{|i| i.name = user_item}
+      
       resp.write ""
     else
       resp.write "Route not found"
