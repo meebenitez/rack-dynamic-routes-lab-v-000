@@ -4,7 +4,7 @@ class Application
 
   def self.all
     @@items
-    binding.pry
+    #binding.pry
   end
 
   def call(env)
