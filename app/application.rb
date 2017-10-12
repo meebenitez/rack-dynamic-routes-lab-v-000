@@ -27,5 +27,5 @@ class Application
   end
 
 
-  
+
 end
