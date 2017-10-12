@@ -8,9 +8,9 @@ class Application
 
 
     if req.path.match(/items/)
-      item = reg.path.split("/items/").last
+      item_name = reg.path.split("/items/").last
       item = @@items.find{|i| i.name = user_item}
-      
+
       resp.write ""
     else
       resp.write "Route not found"
