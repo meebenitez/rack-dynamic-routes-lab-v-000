@@ -5,7 +5,7 @@ class Application
   def self.all
     @@items
   end
-  
+
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
