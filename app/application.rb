@@ -12,6 +12,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
+      binding.pry
       if @@items.name.include?(item_name)
         item = @@items.find{|i| i.name = item_name}
         #binding.pry
