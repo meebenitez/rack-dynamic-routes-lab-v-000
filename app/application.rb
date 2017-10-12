@@ -2,10 +2,6 @@ class Application
 
   @@items = []
 
-  def self.all_items
-    @@items
-  end
-
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
@@ -13,7 +9,6 @@ class Application
     if req.path.match(/items/)
       binding.pry
       item_name = req.path.split("/items/").last
-      if @@items.name.include?(item_name)
         item = @@items.find{|i| i.name = item_name}
         #binding.pry
         resp.write "#{item.price}"
