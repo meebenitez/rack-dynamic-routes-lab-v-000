@@ -9,7 +9,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = reg.path.split("/items/").last
-      item = @@items.find{|i| i.name = user_item}
+      item = @@items.find{|i| i.name = item_name}
 
       resp.write ""
     else
