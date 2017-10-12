@@ -3,7 +3,6 @@ class Application
   @@items = []
 
   def self.all
-    @@items
     binding.pry
   end
 
